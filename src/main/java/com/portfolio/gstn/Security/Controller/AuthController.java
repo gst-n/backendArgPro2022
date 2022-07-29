@@ -39,7 +39,7 @@ public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
-    AuthenticationManager autheticationManager;
+    AuthenticationManager authenticationManager;
     @Autowired
     UsuarioService usuarioService;
     @Autowired
@@ -89,6 +89,3 @@ public class AuthController {
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
 }
-
-
-//1.52 28/7
