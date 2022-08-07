@@ -80,7 +80,7 @@ public class AuthController {
         
         SecurityContextHolder.getContext().setAuthentication(authentication);
         
-        String jwt = jwtProvider.genereteToken(authentication);
+        String jwt = jwtProvider.generateToken(authentication);
         
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         
