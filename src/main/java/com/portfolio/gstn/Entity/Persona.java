@@ -35,7 +35,7 @@ public class Persona {
     private String img;
 
     @NotNull
-    @Size(min = 1, max = 255, message = "No cumple con la longitud")
+    @Size(min = 1, max = 500, message = "No cumple con la longitud")
     private String descripcion;
 
     public Long getId() {
