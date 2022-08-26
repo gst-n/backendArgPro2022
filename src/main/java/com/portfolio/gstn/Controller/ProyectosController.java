@@ -5,7 +5,6 @@
 package com.portfolio.gstn.Controller;
 
 import com.portfolio.gstn.Dto.dtoProyectos;
-import com.portfolio.gstn.Entity.Habilidades;
 import com.portfolio.gstn.Entity.Proyectos;
 import com.portfolio.gstn.Security.Controller.Mensaje;
 import com.portfolio.gstn.Service.ProyectoService;
@@ -38,13 +37,13 @@ public class ProyectosController {
      ProyectoService proyectoService;
     
      @GetMapping("/lista")
-    public ResponseEntity<List<Habilidades>> list(){
+    public ResponseEntity<List<Proyectos>> list(){
         List<Proyectos> list = proyectoService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Habilidades> getById(@PathVariable("id") int id){
+    public ResponseEntity<Proyectos> getById(@PathVariable("id") int id){
         if(!proyectoService.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Proyectos proyectos = proyectoService.getOne(id).get();
