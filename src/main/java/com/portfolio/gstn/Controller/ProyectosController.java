@@ -58,7 +58,7 @@ public class ProyectosController {
         if(proyectoService.existsByNombre(dtoproyectos.getNombre()))
             return new ResponseEntity(new Mensaje("Ese Proyecto ya existe"), HttpStatus.BAD_REQUEST);
        
-        Proyectos proyectos = new Proyectos(dtoproyectos.getNombre(), dtoproyectos.getUrlRepositorio());
+        Proyectos proyectos = new Proyectos(dtoproyectos.getNombre(), dtoproyectos.getUrlRepositorio(), dtoproyectos.getDescripcion(), dtoproyectos.getImgUrl());
         proyectoService.save(proyectos);
         
         System.out.println(dtoproyectos.getNombre());

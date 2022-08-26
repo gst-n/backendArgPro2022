@@ -36,8 +36,8 @@ public class ProyectoService {
         return proyectoRepository.findByNombre(nombre);
     }
     
-    public void save(Proyectos expe){
-        proyectoRepository.save(expe);
+    public void save(Proyectos proy){
+        proyectoRepository.save(proy);
     }
     
     public void delete(int id){

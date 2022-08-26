@@ -16,13 +16,36 @@ public class dtoProyectos {
     private String nombre;
     @NotBlank
     private String urlRepositorio;
+    @NotBlank
+    private String descripcion;
+    @NotBlank
+    private String imgUrl;
 
     public dtoProyectos() {
     }
 
-    public dtoProyectos(String nombre, String urlGithub) {
+    public dtoProyectos(String nombre, String urlGithub, String descripcion, String imgUrl) {
         this.nombre = nombre;
         this.urlRepositorio = urlGithub;
+        this.descripcion = descripcion;
+        this.imgUrl = imgUrl;
+        
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getNombre() {
