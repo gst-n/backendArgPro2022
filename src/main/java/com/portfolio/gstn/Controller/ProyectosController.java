@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProyectosController {
     
     @Autowired
-     ProyectoService proyectoService;
+    ProyectoService proyectoService;
     
      @GetMapping("/lista")
     public ResponseEntity<List<Proyectos>> list(){
@@ -90,6 +90,7 @@ public class ProyectosController {
         Proyectos proyectos = proyectoService.getOne(id).get();
         proyectos.setNombre(dtoproyectos.getNombre());
         proyectos.setUrlRepositorio((dtoproyectos.getUrlRepositorio()));
+     
         
         proyectoService.save(proyectos);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
