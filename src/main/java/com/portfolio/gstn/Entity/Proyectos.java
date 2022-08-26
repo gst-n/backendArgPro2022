@@ -17,44 +17,28 @@ import javax.validation.constraints.Size;
  */
 @Entity
 public class Proyectos {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String nombre;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String urlRepositorio;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String descripcion;
-    
+
     @NotNull
     @Size(min = 1, max = 255, message = "No cumple con la longitud")
     private String imgUrl;
 
     public Proyectos(String nombre, String urlRepositorio, String descripcion, String imgUrl) {
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
     }
 
     public int getId() {
@@ -80,8 +64,21 @@ public class Proyectos {
     public void setUrlRepositorio(String urlRepositorio) {
         this.urlRepositorio = urlRepositorio;
     }
-    
-    
-    
-    
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
 }
