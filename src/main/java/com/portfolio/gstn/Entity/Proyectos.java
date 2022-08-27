@@ -34,6 +34,10 @@ public class Proyectos {
     @NotNull
     private String imgUrl;
 
+    public Proyectos() {
+    }
+    
+
     public Proyectos(String nombre, String urlRepositorio, String descripcion, String imgUrl) {
         this.nombre = nombre;
         this.urlRepositorio = urlRepositorio;
