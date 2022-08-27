@@ -32,8 +32,8 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "https://frontend-gstn.web.app")
 public class ProyectosController {
 
-    @Autowired
-    ProyectoService proyectoService;
+@Autowired
+ProyectoService proyectoService;
 
     @GetMapping("/lista")
     public ResponseEntity<List<Proyectos>> list() {

@@ -20,8 +20,8 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class ProyectoService {
-    @Autowired
-    ProyectoRepository proyectoRepository;
+@Autowired
+ProyectoRepository proyectoRepository;
     
         public List<Proyectos> list(){
         return proyectoRepository.findAll();
