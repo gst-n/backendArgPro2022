@@ -21,24 +21,24 @@ public class Proyectos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String nombre;
-
+    
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String urlRepositorio;
-
+    
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String descripcion;
-
+    
     @NotNull
-    @Size(min = 1, max = 255, message = "No cumple con la longitud")
     private String imgUrl;
 
     public Proyectos(String nombre, String urlRepositorio, String descripcion, String imgUrl) {
+        this.nombre = nombre;
+        this.urlRepositorio = urlRepositorio;
+        this.descripcion = descripcion;
+        this.imgUrl = imgUrl;
     }
 
     public int getId() {

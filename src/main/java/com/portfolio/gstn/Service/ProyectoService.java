@@ -36,8 +36,8 @@ ProyectoRepository proyectoRepository;
         return proyectoRepository.findByNombre(nombre);
     }
     
-    public void save(Proyectos proy){
-        proyectoRepository.save(proy);
+    public void save(Proyectos proyecto){
+        proyectoRepository.save(proyecto);
     }
     
     public void delete(int id){
